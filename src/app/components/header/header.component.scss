@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+.header{
+    background: $color-grayLight;
+}
+.logo{
+    width: 60px;
+}
+.login-div{
+    text-align: right;
+    padding-top: 10px;
+}
+.signup-btn{
+    background: $color-blue1;
+    color: white;
+}

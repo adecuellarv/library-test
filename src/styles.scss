@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #f1f1f1; }
+h1{
+    font-size: 28px;
+}
 $color-blue1: #2a52a7;
 $color-blue2: #2766be;
 $color-blue3: #207bd5;
@@ -10,3 +12,28 @@ $color-blue4: #1290eb;
 $color-purpur1: #2b3f90;
 $color-grayLight: #eee;
 $color-grayMedium: #333;
+
+//$sizeh2: 22px;
+//$sizeh3: 16px;
+
+.card-content{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 6px 3px 11px 0px rgb(194 194 194 / 75%);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-blue{
+    background: $color-blue1;
+    color: white;
+}
+
+.btn-yellow{
+    background: #d39e00;
+}
+.btn-yellow:focus{
+    background: #e7c96d;
+    border: 0px !important;
+    outline: initial !important;
+}

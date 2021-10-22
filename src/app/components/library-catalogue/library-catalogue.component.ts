@@ -26,7 +26,7 @@ export class LibraryCatalogueComponent implements OnInit {
       {
         id: 2,
         image:
-          'https://image.isu.pub/200825131631-fc70c3f572f7723b88b4d42c8172da3b/jpg/page_1.jpg',
+          'http://images.randomhouse.com/cover/9780553539035',
         title: 'Glyph',
         author: 'Tomas H',
         yearPublised: '2017',

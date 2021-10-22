@@ -1,5 +1,15 @@
 @import '../../../styles.scss';
 
+.title-filters{
+    padding: 20px;
+    margin-top: 90px;
+    border-right: 1px solid #eee;
+}
+.title-filters label{
+    font-size: 25px;
+    color: $color-grayMedium;
+}
+
 .card-search {
   background: $color-blue1;
   padding: 40px;

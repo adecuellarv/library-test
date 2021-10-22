@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatAutocompleteModule} from '@angular/material/autocomplete'
+import {MatTreeModule} from '@angular/material/tree'
 //import { MatRaisedButtonModule } from '@angular/material/raised'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

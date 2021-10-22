@@ -2,7 +2,21 @@
     <div class="library-catalogue card-content">
         <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-2">
-                Filters
+                <div class="content-filters">
+                    <div class="title-filters">
+                        <label>Categorías</label>
+                    </div>
+                    <div class="filters-options">
+                        <div id="list-example" class="list-group">
+                            <a class="list-group-item list-group-item-action">Todos</a>
+                            <a class="list-group-item list-group-item-action">Ciencia ficción</a>
+                            <a class="list-group-item list-group-item-action">Novelas</a>
+                            <a class="list-group-item list-group-item-action">Terror</a>
+                            <a class="list-group-item list-group-item-action active">Infantil</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="col-sm-8 col-md-8 col-lg-10">
                 <div class="row">
@@ -24,7 +38,8 @@
                             <div class="col-sm-12">
                                 <h1 class="title-books-list">Libros</h1>
                             </div>
-                            <app-book class="col-sm-6 col-md-4 col-lg-2" *ngFor="let book of books" [book]="book"></app-book>
+                            <app-book class="col-sm-6 col-md-4 col-lg-2" *ngFor="let book of books" [book]="book">
+                            </app-book>
                         </div>
                     </div>
                 </div>

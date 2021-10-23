@@ -1,0 +1,38 @@
+@import '../../../styles.scss';
+
+.capa{
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    background: orange;
+}
+.single-book {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 30%;
+  background: #313840;
+  z-index: 111;
+  height: 100vh;
+  overflow-y: overlay;
+  text-align: center;
+  box-shadow: -6px 7px 11px 0px rgb(68 68 68 / 75%);
+  border-radius: 10px 0px 0px 10px;
+  padding-top: 10px;
+
+  h2{
+      color: white;
+  }
+
+  img {
+    width: 55%;
+    margin: 0 auto;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 295px;
+  }
+}

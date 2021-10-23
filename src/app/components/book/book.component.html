@@ -1,5 +1,5 @@
 
-    <div class="row">
+    <div class="row" (click) = "onShow(book)">
         <div class="col-sm-12">
             <img class="image-book" src='{{ book.image }}' alt='image-book'>
         </div>
@@ -7,6 +7,6 @@
             <h2>{{book.title}}</h2>
             <h3>{{book.author}}</h3>
             <p>{{book.yearPublised}}</p>
-            <button mat-raised-button class="btn-yellow">Obtener</button>
+            <button mat-raised-button class="btn-yellow" (click)= "onAdd(book)">Obtener</button>
         </div>
     </div>

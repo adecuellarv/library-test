@@ -18,6 +18,7 @@ import { SingleBookComponent } from './components/single-book/single-book.compon
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { LoginComponent } from './components/login/login.component'
     MatAutocompleteModule,
     MatFormFieldModule,
     MatTreeModule,
-    StoreModule.forRoot({singleBookReducer})
+    StoreModule.forRoot({singleBookReducer}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

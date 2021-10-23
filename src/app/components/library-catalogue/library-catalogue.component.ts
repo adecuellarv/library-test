@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { Book } from '../../models/books'
+import { RestService } from 'src/app/services/rest.service'
+import { baseapi } from 'src/app/services/config'
 
 @Component({
   selector: 'app-library-catalogue',
@@ -7,32 +8,18 @@ import { Book } from '../../models/books'
   styleUrls: ['./library-catalogue.component.scss']
 })
 export class LibraryCatalogueComponent implements OnInit {
-  books: Book[] = []
+  //books: Book[] = []
+  books: any = []
 
-  constructor () {}
+  constructor (private RestService: RestService) {}
 
   ngOnInit (): void {
-    this.books = [
-      {
-        id: 1,
-        title: 'What if?',
-        image:
-          'https://image.isu.pub/200825131631-fc70c3f572f7723b88b4d42c8172da3b/jpg/page_1.jpg',
-        author: 'Henrry H',
-        yearPublised: '2018',
-        description:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione enim, placeat quis dolores temporibus rem? Mollitia dolorum dignissimos placeat amet, iusto error facere tempora nulla, et, aut architecto expedita adipisci!'
-      },
-      {
-        id: 2,
-        image:
-          'http://images.randomhouse.com/cover/9780553539035',
-        title: 'Glyph',
-        author: 'Tomas H',
-        yearPublised: '2017',
-        description:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione enim, placeat quis dolores temporibus rem? Mollitia dolorum dignissimos placeat amet, iusto error facere tempora nulla, et, aut architecto expedita adipisci!'
-      }
-    ]
+    this.loadData()
+  }
+
+  public loadData () {
+    this.RestService.get(baseapi + 'books').subscribe(resp => {
+      this.books = resp
+    })
   }
 }

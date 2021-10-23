@@ -5,10 +5,22 @@
                 <a routerLink=""><img class="logo" src='../../../assets/images/logo.png' alt='image'></a>
             </div>
             <div class="col-sm-6 login-div">
-
-                <section>
+                <section *ngIf="!islogged">
                     <a mat-raised-button class="btn-login" routerLink="login">Login</a>
                     <button mat-raised-button class="btn-blue" routerLink="crear-cuenta">Crear Cuenta</button>
+                </section>
+                <section *ngIf="islogged" class="user-logged">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="userimg" src='../../../assets/images/user.png' alt='image-user'>
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" routerLink="datos-personales">Datos personales</a>
+                            <a class="dropdown-item" (click)="logout()">Cerrar session</a>
+                        </div>
+                    </div>
+                    
                 </section>
             </div>
         </div>

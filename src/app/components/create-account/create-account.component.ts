@@ -64,8 +64,10 @@ export class CreateAccountComponent implements OnInit {
         email: this.email,
         paswd: this.password
       }).subscribe(resp => {
-        console.log(resp)
-        //this.books = resp
+        if(resp.code === 200){
+          localStorage.setItem('token', resp.token);
+          window.location.href = '/datos-personales';
+        }
       })
     } else this.haserrors = true
   }

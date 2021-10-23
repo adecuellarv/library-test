@@ -18,7 +18,8 @@ import { SingleBookComponent } from './components/single-book/single-book.compon
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { PersonalDataComponent } from './components/personal-data/personal-data.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http'
     SingleBookComponent,
     CreateAccountComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PersonalDataComponent
   ],
   imports: [
     BrowserModule,

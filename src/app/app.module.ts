@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import {MatAutocompleteModule} from '@angular/material/autocomplete'
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTreeModule} from '@angular/material/tree'
 import { StoreModule } from '@ngrx/store'
 import { singleBookReducer } from './singleBook.reducer'
@@ -36,6 +37,7 @@ import { LoginComponent } from './components/login/login.component'
     MatButtonModule,
     MatCardModule,
     MatAutocompleteModule,
+    MatFormFieldModule,
     MatTreeModule,
     StoreModule.forRoot({singleBookReducer})
   ],

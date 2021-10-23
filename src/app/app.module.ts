@@ -13,7 +13,10 @@ import { HeaderComponent } from './components/header/header.component'
 import { LibraryCatalogueComponent } from './components/library-catalogue/library-catalogue.component'
 import { BookComponent } from './components/book/book.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SingleBookComponent } from './components/single-book/single-book.component'
+import { SingleBookComponent } from './components/single-book/single-book.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { SingleBookComponent } from './components/single-book/single-book.compon
     HeaderComponent,
     LibraryCatalogueComponent,
     BookComponent,
-    SingleBookComponent
+    SingleBookComponent,
+    CreateAccountComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

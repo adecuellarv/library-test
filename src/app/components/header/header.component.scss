@@ -4,11 +4,16 @@
     box-shadow: 6px 3px 11px 0px rgb(194 194 194 / 75%);
     margin-bottom: 20px;
     padding: 0px 20px;
-}
-.logo{
-    width: 60px;
-}
-.login-div{
-    text-align: right;
-    padding-top: 10px;
+    
+    .logo{
+        width: 60px;
+    }
+    .login-div{
+        text-align: right;
+        padding-top: 10px;
+    }
+    
+    .btn-login{
+        margin-right: 20px;
+    }
 }

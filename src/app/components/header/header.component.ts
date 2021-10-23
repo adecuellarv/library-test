@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-header',
@@ -6,20 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  constructor () {}
 
   islogged: boolean = false
-  
-  ngOnInit(): void {
-    if(localStorage.getItem('token')) this.islogged = true
+  countItems: string = ''
+
+  ngOnInit (): void {
+    const items = localStorage.getItem('count-books');
+    if (items) {
+      this.countItems = items
+    }
+    if (localStorage.getItem('token')) this.islogged = true
     else this.islogged = false
   }
 
-  logout(){
-    localStorage.removeItem('token');
-    localStorage.removeItem('userid');
-    window.location.href = '/';
+  logout () {
+    localStorage.removeItem('token')
+    localStorage.removeItem('userid')
+    localStorage.removeItem('count-books')
+    window.location.href = '/'
   }
-
 }

@@ -26,4 +26,12 @@ export class RestService {
   public putuser (url: string, info: object){
     return this.http.post<any>(url, info);
   }
+
+  public getbooksuser (url: string){
+    return this.http.get<any>(url);
+  }
+
+  public postbooksuser (url: string, info: object){
+    return this.http.post<any>(url, info);
+  }
 }

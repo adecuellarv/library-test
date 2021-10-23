@@ -10,17 +10,18 @@
                     <button mat-raised-button class="btn-blue" routerLink="crear-cuenta">Crear Cuenta</button>
                 </section>
                 <section *ngIf="islogged" class="user-logged">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <label class="items-login">Prestamos <b>{{countItems}}</b></label>
+                    <div class="dropdown items-login">
+                        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <img class="userimg" src='../../../assets/images/user.png' alt='image-user'>
-                    </a>
+                        </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" routerLink="datos-personales">Datos personales</a>
                             <a class="dropdown-item" (click)="logout()">Cerrar session</a>
                         </div>
                     </div>
-                    
+
                 </section>
             </div>
         </div>

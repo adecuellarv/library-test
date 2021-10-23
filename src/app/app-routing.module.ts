@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { MyBooksComponent } from './components/my-books/my-books.component';
 import { PersonalDataComponent } from './components/personal-data/personal-data.component';
 
 
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'datos-personales',
     component: PersonalDataComponent
+  },
+  {
+    path: 'mis-libros',
+    component: MyBooksComponent
   }
 ];
 

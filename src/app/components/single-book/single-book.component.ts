@@ -30,6 +30,10 @@ export class SingleBookComponent implements OnInit {
   }
 
   onAdd (book: Book) {
-    alert('crear cuenta')
+    if(localStorage.getItem('token')){
+      alert('checkar cuantos libros tengo')
+    }else{
+      window.location.href = '/login';
+    }
   }
 }

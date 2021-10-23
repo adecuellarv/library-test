@@ -19,7 +19,8 @@ import { CreateAccountComponent } from './components/create-account/create-accou
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
 import { HttpClientModule } from '@angular/common/http';
-import { PersonalDataComponent } from './components/personal-data/personal-data.component'
+import { PersonalDataComponent } from './components/personal-data/personal-data.component';
+import { MyBooksComponent } from './components/my-books/my-books.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PersonalDataComponent } from './components/personal-data/personal-data.
     CreateAccountComponent,
     HomeComponent,
     LoginComponent,
-    PersonalDataComponent
+    PersonalDataComponent,
+    MyBooksComponent
   ],
   imports: [
     BrowserModule,

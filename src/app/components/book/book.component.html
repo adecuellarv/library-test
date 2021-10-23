@@ -1,12 +1,11 @@
-
-    <div class="row" (click) = "onShow(book)">
-        <div class="col-sm-12">
-            <img class="image-book" src='{{ book.image }}' alt='image-book'>
-        </div>
-        <div class="col-sm-12 info-book">
-            <h2>{{book.title}}</h2>
-            <h3>{{book.author}}</h3>
-            <p>{{book.yearPublised}}</p>
-            <button mat-raised-button class="btn-yellow" (click)= "onAdd(book)">Obtener</button>
-        </div>
+<div class="row">
+    <div class="col-sm-12" (click)="onShow(book)">
+        <img class="image-book" src='{{ book.image }}' alt='image-book'>
     </div>
+    <div class="col-sm-12 info-book">
+        <h2 (click)="onShow(book)">{{book.title}}</h2>
+        <h3 (click)="onShow(book)">{{book.author}}</h3>
+        <p (click)="onShow(book)">{{book.yearPublised}}</p>
+        <button mat-raised-button class="btn-yellow" (click)="onAdd(book)">Obtener</button>
+    </div>
+</div>

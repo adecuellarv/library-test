@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { Book } from 'src/app/models/books'
 import { Store } from '@ngrx/store'
 import { Observable } from 'rxjs'
-import { selectBook } from '../../singleBook.actions'
+import { cleanBook } from '../../singleBook.actions'
 
 @Component({
   selector: 'app-single-book',
@@ -10,10 +10,9 @@ import { selectBook } from '../../singleBook.actions'
   styleUrls: ['./single-book.component.scss']
 })
 export class SingleBookComponent implements OnInit {
-
   bookInfo$: Observable<object>
 
-  bookInfoObj: Book[] = [];
+  bookInfoObj: Book[] = []
 
   constructor (private store: Store<{ singleBookReducer: object }>) {
     this.bookInfo$ = store.select('singleBookReducer')
@@ -21,12 +20,16 @@ export class SingleBookComponent implements OnInit {
 
   onCleanSingle () {
     //this.store.dispatch(selectBook(this.bookInfoObj[0]))
+    this.store.dispatch(cleanBook())
   }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
     this.bookInfo$.subscribe((data: any) => {
-      this.bookInfoObj = [data];
+      this.bookInfoObj = [data]
     })
   }
 
+  onAdd (book: Book) {
+    alert('crear cuenta')
+  }
 }

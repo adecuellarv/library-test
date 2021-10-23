@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { selectBook } from './singleBook.actions';
+import { selectBook, cleanBook } from './singleBook.actions';
 import { Book } from './models/books';
 
 export const initialState = {};
@@ -12,6 +12,12 @@ const _counterReducer = createReducer(
           ...action
       }
   }),
+  on(cleanBook, () => {
+    return {
+        initialState
+    }
+}),
+
 );
 
 export function singleBookReducer(state: object = Book, action:  Action) {

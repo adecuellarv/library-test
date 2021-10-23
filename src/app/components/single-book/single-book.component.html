@@ -1,9 +1,15 @@
-
 <div *ngIf="bookInfoObj[0].title">
-    <div class="capa"></div>
+    <div class="capa" (click)="onCleanSingle()"></div>
     <div class="single-book">
         <h2>Acerca del libro</h2>
 
         <img src='{{ bookInfoObj[0].image }}' />
+
+        <div class="info-single-book">
+            <h3>{{bookInfoObj[0].title}}</h3>
+            <label>{{bookInfoObj[0].author}} - {{bookInfoObj[0].yearPublised}}</label>
+            <p>{{bookInfoObj[0].description}}</p>
+            <button mat-raised-button class="btn-yellow" (click)="onAdd(bookInfoObj[0])">Obtener</button>
+        </div>
     </div>
 </div>

@@ -19,3 +19,10 @@
     color: white;
     margin-bottom: 20px;
 }
+
+$breakpoint-tablet: 1068px;
+@media (max-width: $breakpoint-tablet) {
+  .form-create-account {
+    width: 90%;
+  }
+}

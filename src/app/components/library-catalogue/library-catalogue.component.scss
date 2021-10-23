@@ -37,3 +37,9 @@ input {
 .title-books-list{
     color: #3e3b3b;
 }
+
+@media (max-width: 700px) {
+.content-filters{
+  display: none;
+}
+}

@@ -34,7 +34,9 @@ export class BookComponent implements OnInit {
       const userid = localStorage.getItem('userid')
       this.RestService.getbooksuser(baseapi + 'booksuser/' + userid).subscribe(
         resp => {
-            //localStorage.setItem('count-books', resp.length);
+            if(!resp){
+              localStorage.setItem('count-books', '0');
+            }
             if (resp.length < 3) {
               this.RestService.postbooksuser(baseapi + 'book-to-user', {
                 idbook: book.idbook,

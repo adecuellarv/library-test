@@ -1,1 +1,39 @@
-<p>personal-data works!</p>
+<div class="library-catalogue card-content">
+    <div class="title-div-ca">
+        <h1>Mis datos</h1>
+    </div>
+    <div class="form-create-account">
+        <div class="form-group">
+            <label for="inputName">Nombre</label>
+            <input type="text" class="form-control" id="inputName" (keyup)="onKeyName($event)" value="{{name}}"
+                aria-describedby="nameHelp" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <label for="inputLastName">Apellidos</label>
+            <input type="text" class="form-control" id="inputLastName" (keyup)="onKeyLastName($event)"
+                value="{{lastname}}" aria-describedby="lastNameHelp" placeholder="Apellidos">
+
+        </div>
+        <div class="form-group">
+            <label for="inputPhone">Celular</label>
+            <input type="text" class="form-control" id="inputPhone" (keyup)="onKeyPhone($event)" value="{{phone}}"
+                aria-describedby="inputPhoneHelp" placeholder="Celular">
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" (keyup)="onKeyEmail($event)"
+                value="{{email}}" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" (keyup)="onKeyPassword($event)"
+                value="{{password}}" placeholder="Contraseña">
+        </div>
+
+        <div *ngIf="haserrors" class="errorsdiv">
+            Favor de ingresar datos
+        </div>
+        <button class="btn btn-primary" (click)="update()">Guardar</button>
+    </div>
+</div>

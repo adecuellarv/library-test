@@ -14,4 +14,8 @@ export class RestService {
   public postca (url: string, info: object){
     return this.http.post<any>(url, info);
   }
+
+  public postloggin (url: string, info: object){
+    return this.http.post<any>(url, info);
+  }
 }

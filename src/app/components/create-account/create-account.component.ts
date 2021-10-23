@@ -9,7 +9,6 @@ import { baseapi } from 'src/app/services/config'
   styleUrls: ['./create-account.component.scss']
 })
 export class CreateAccountComponent implements OnInit {
-  //email = new FormControl('', [Validators.required, Validators.email]);
   name: string = ''
   lastname: string = ''
   phone: string = ''
@@ -17,15 +16,6 @@ export class CreateAccountComponent implements OnInit {
   password: string = ''
   haserrors: boolean = false
   constructor (private RestService: RestService) {}
-
-  /*
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }*/
 
   onKeyName (event: any) {
     this.name = event.target.value
@@ -64,18 +54,13 @@ export class CreateAccountComponent implements OnInit {
         email: this.email,
         paswd: this.password
       }).subscribe(resp => {
-        if(resp.code === 200){
-          localStorage.setItem('token', resp.token);
-          window.location.href = '/datos-personales';
+        if (resp.code === 200) {
+          localStorage.setItem('token', resp.token)
+          window.location.href = '/datos-personales'
         }
       })
     } else this.haserrors = true
   }
 
-  ngOnInit (): void {
-    /*
-    this.http.post<any>('https://reqres.in/api/posts', { title: 'Angular POST Request Example' }).subscribe(data => {
-        this.postId = data.id;
-    })*/
-  }
+  ngOnInit (): void {}
 }

@@ -49,3 +49,10 @@
     }
   }
 }
+
+$breakpoint-tablet: 1068px;
+@media (max-width: $breakpoint-tablet) {
+  .single-book {
+    width: 90%;
+  }
+}

@@ -10,4 +10,8 @@ export class RestService {
   public get (url: string) {
     return this.http.get(url)
   }
+
+  public postca (url: string, info: object){
+    return this.http.post<any>(url, info);
+  }
 }
